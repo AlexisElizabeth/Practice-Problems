@@ -13,5 +13,5 @@ numbers = {
 reply = "" 
 phone_number = input("Phone: ")
 for number in phone_number:
-    reply += numbers[number]
+    reply += numbers.get(number, "! ")
 print(reply)
