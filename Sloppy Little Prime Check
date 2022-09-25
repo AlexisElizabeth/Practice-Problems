@@ -1,0 +1,7 @@
+number = int(input("Please enter a number: "))
+range = list(range(2, number))
+new_list = [integer for integer in range if number % integer == 0]
+if len(new_list) == 0:
+    print("Your number is prime!")
+else:
+    print(f"The divisors of your number are {new_list}")
