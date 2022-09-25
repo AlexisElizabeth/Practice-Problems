@@ -1,0 +1,17 @@
+import random
+
+while True:
+    guess = input("Please guess a number between 1 and 9: ")
+    random_number = random.randint(1, 9)
+    if guess in "123456789":
+        if int(guess) == random_number:
+            print(f"You guessed right! I guessed {random_number}")
+        elif int(guess) > random_number:
+            print(f"You guessed too high! I guessed {random_number}")
+        elif int(guess) < random_number:
+            print(f"You guessed too low! I guessed {random_number}")
+    else:
+        if guess == "Exit" or guess == "exit":
+            break
+        else:
+            print("I dont understand. Try again.")
