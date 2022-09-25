@@ -1,0 +1,15 @@
+fibonacci_sequence = [1, 1, 2, 3, 5]
+
+length_of_list = input("How many digits would you like to generate of the Fibonacci sequence? ")
+
+if int(length_of_list) == 1:
+    print([1])
+elif int(length_of_list) == 2:
+    print([1, 1])
+elif int(length_of_list) > 2:
+    new_sequence = [1, 1]
+    count = 2
+    while count < int(length_of_list):
+        new_sequence.append(new_sequence[-2] + new_sequence[-1])
+        count += 1
+    print(new_sequence)
